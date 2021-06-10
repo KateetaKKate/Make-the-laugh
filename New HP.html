@@ -1,58 +1,201 @@
-<html>
+<!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>おすすめの本</title>
     <style>
-        main {
-            width: 70%;
-            display: inline-block;
-            vertical-align: top;
-        }
-        
-        aside {
-            width: calc(30% - 26px);
-            display: inline-block;
-            margin-left: 20px;
-            box-sizing: border-box;
-            border: solid 1px;
-        }
-        
-        p {
-            line-height: 2;
-            width: 60%;
-            display: inline-block;
-            padding-right: 10px;
-            box-sizing: border-box;
-            vertical-align: top;
-            margin: 0;
-        }
-        
-        .imgarea {
-            height: 150px;
-            width: calc(40% - 6px);
-            background-color: #ccc;
-            display: inline-block;
-        }
-        @media screen and (max-width:480px) {
-            main {
-                width: 100%;
+        body {
+            font-family: "Avenir Next";
+            display: flex;
+            flex-flow: column;
+            min-height: 100vh;
         }
 
-}
+        li {
+            list-style: none;
+        }
+
+        .header {
+            background-color: rgb(121, 119, 119);
+            color: rgb(248, 250, 250);
+            height: 60px;
+        }
+
+        .header-logo {
+            float: left;
+            font-size: 20px;
+            padding: 15px 40px;
+        }
+
+
+        .main {
+            color: black;
+            height: 100%;
+            background-image: url(dust_scratches.png);
+            flex: 1;
+            font-family: fantasy;
+        }
+
+        .items{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .items:after{
+            content:"";
+            display:block;
+            width: 32%;
+            height:0;
+        }
+        .item{
+            width: 32%;
+            height: 100%;
+            margin-bottom: 2%;
+        }
+
+        
+        .footer {
+            background-color: rgb(86, 86, 87);
+            color: white;
+            height: 70px;
+        }
+
+        .footer-logo {
+            float: left;
+            font-size: 15px;
+            padding: 23px 10px 24px 10px;
+        }      
     </style>
+
 </head>
 <body>
-	<main>
-		<p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-		<div class="imgarea"></div>
-	</main>
-	<aside>
-		<ul>
-			<li>テキスト</li>
-			<li>テキスト</li>
-			<li>テキスト</li>
-		</ul>
-	</aside>
+    <div class="header">
+        <div class="header-logo">おすすめの本</div>
+    </div>
+
+    <div class="main">
+        <div class="items">
+            <div class="item">
+                <p>最強の集中力</p>
+                <img src="最強の集中力.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="最強の集中力.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>習慣が10割</p>
+                <img src="習慣が10割.jpeg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="習慣が10割.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>神時間術</p>
+                <img src="神時間術.jpeg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="神時間術.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>0秒思考</p>
+                <img src="0秒思考.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="0秒思考.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>人生を変えるお金の話</p>
+                <img src="人生を変えるお金の話.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="人生を変えるお金の話.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>君は一万円札を破れるか</p>
+                <img src="一万円札を破れるだろうか.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="一万円札を破れるだろうか.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>Fire早期リタイア術</p>
+                <img src="Fire早期リタイア術.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="Fire早期リタイア術.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>無名の男が270億手に入れた物語</p>
+                <img src="無名の男.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="無名の男.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>フルパワー</p>
+                <img src="フルパワー.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="フルパワー.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>人は話し方が9割</p>
+                <img src="話し方が9割.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="話し方が九割.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>フリーミアム戦略</p>
+                <img src="フリーミアム戦略.jpg" alt="写真"　width="150px" height="135px"><br>
+                <audio preload="metadata" controls>
+                    <source src="フリーミアム戦略.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>論理的MGK</p>
+                <img src="論理的MGK.png" alt="写真"　width="150px" height="130px"><br>
+                <audio preload="metadata" controls>
+                    <source src="論理的MGK.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>デジタルミニマリスト</p>
+                <img src="デジタルミニマリスト.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="デジタルミニマリスト.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>super human</p>
+                <img src="super human.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="super human.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                <p>脳のバグらせ方</p>
+                <img src="脳のバグらせ方.jpg" alt="写真"　width="150px" height="136px"><br>
+                <audio preload="metadata" controls>
+                    <source src="脳のバグらせ方.m4a" type="audio/aac">
+                </audio>
+            </div><br>
+            <div class="item">
+                
+            </div>
+            <div class="item">
+                
+            </div>
+            <div class="item">
+                
+            </div>
+        </div>
+            
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">おすすめの本</div>
+    </div>
 </body>
 </html>
