@@ -52,11 +52,66 @@
             height: 280px;
             margin-bottom: 1%;
             margin-top: 1%;
-            border: solid;
-            border-width: 1px;
-            border-color: rgb(100, 100, 100);
         }
         
+        .item {
+            position: relative;
+            /* margin: 0 10px; */
+        }
+        /* 線の基点位置 */
+        .item::before,
+        .item::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: rgb(100, 100, 100);
+            transition: all 0.2s linear;
+            transition-delay: 0.2s;
+        }
+        .item::before {
+            right: 0;
+            top: 0;
+        }
+        .item::after {
+            left: 0;
+            bottom: 0;
+        }
+        .item span{
+            display: block;
+        }
+
+        .item span::before,
+        .item span::after{
+            content:"";
+            /*絶対配置で線の位置を決める*/
+            position: absolute;
+            /*線の形状*/
+            width:2px;
+            height:0;
+            background: rgb(100, 100, 100);
+        /*アニメーションの指定*/
+            transition: all 0.2s linear;
+        }
+
+        .item span::before{
+            left: 0;
+            top: 0;
+        }
+        .item span::after{
+            right: 0;
+            bottom: 0;
+        }
+        .item:hover::before,
+        .item:hover::after {
+            width: 100%;
+        }
+        .item:hover span::before,
+        .item:hover span::after {
+            height: 100%;
+        }
+
+
         .footer {
             background-color: rgb(80, 80, 80);
             color: white;
@@ -70,6 +125,7 @@
         }      
     </style>
 </head>
+</head>
 
 <body>
     <div class="header">
@@ -79,143 +135,192 @@
     <div class="main">
         <div class="items">
             <div class="item">
-                <p>最強の集中力</p>
-                <img src="最強の集中力.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="最強の集中力.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>最強の集中力</p>
+                    <img src="最強の集中力.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="最強の集中力.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>習慣が10割</p>
-                <img src="習慣が10割.jpeg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="習慣が10割.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>習慣が10割</p>
+                    <img src="習慣が10割.jpeg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="習慣が10割.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>神時間術</p>
-                <img src="神時間術.jpeg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="神時間術.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>神時間術</p>
+                    <img src="神時間術.jpeg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="神時間術.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>0秒思考</p>
-                <img src="0秒思考.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="0秒思考.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>0秒思考</p>
+                    <img src="0秒思考.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="0秒思考.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>人生を変えるお金の話</p>
-                <img src="人生を変えるお金の話.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="人生を変えるお金の話.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>人生を変えるお金の話</p>
+                    <img src="人生を変えるお金の話.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="人生を変えるお金の話.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>君は一万円札を破れるか</p>
-                <img src="一万円札を破れるだろうか.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="一万円札を破れるだろうか.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>君は一万円札を破れるか</p>
+                    <img src="一万円札を破れるだろうか.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="一万円札を破れるだろうか.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>Fire早期リタイア術</p>
-                <img src="Fire早期リタイア術.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="Fire早期リタイア術.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>Fire早期リタイア術</p>
+                    <img src="Fire早期リタイア術.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="Fire早期リタイア術.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>無名の男が270億手に入れた物語</p>
-                <img src="無名の男.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="無名の男.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>無名の男が270億手に入れた物語</p>
+                    <img src="無名の男.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="無名の男.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>フルパワー</p>
-                <img src="フルパワー.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="フルパワー.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>フルパワー</p>
+                    <img src="フルパワー.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="フルパワー.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>人は話し方が9割</p>
-                <img src="話し方が9割.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="話し方が九割.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>人は話し方が9割</p>
+                    <img src="話し方が9割.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="話し方が九割.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>フリーミアム戦略</p>
-                <img src="フリーミアム戦略.jpg" alt="写真"　width="150px" height="135px"><br>
-                <audio preload="metadata" controls>
-                    <source src="フリーミアム戦略.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>フリーミアム戦略</p>
+                    <img src="フリーミアム戦略.jpg" alt="写真"　width="150px" height="135px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="フリーミアム戦略.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>論理的MGK</p>
-                <img src="論理的MGK.png" alt="写真"　width="150px" height="130px"><br>
-                <audio preload="metadata" controls>
-                    <source src="論理的MGK.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>論理的MGK</p>
+                    <img src="論理的MGK.png" alt="写真"　width="150px" height="130px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="論理的MGK.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>デジタルミニマリスト</p>
-                <img src="デジタルミニマリスト.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="デジタルミニマリスト.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>デジタルミニマリスト</p>
+                    <img src="デジタルミニマリスト.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="デジタルミニマリスト.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>super human</p>
-                <img src="super human.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="super human.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>super human</p>
+                    <img src="super human.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="super human.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>脳のバグらせ方</p>
-                <img src="脳のバグらせ方.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="脳のバグらせ方.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>脳のバグらせ方</p>
+                    <img src="脳のバグらせ方.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="脳のバグらせ方.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>最強の仕事術</p>
-                <img src="最強の仕事術.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="最強の仕事術.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>最強の仕事術</p>
+                    <img src="最強の仕事術.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="最強の仕事術.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                <p>凡人くんの人生革命</p>
-                <img src="凡人くんの人生革命.jpg" alt="写真"　width="150px" height="136px"><br>
-                <audio preload="metadata" controls>
-                    <source src="凡人の人生計画.m4a" type="audio/aac">
-                </audio>
+                <span>
+                    <p>凡人くんの人生革命</p>
+                    <img src="凡人くんの人生革命.jpg" alt="写真"　width="150px" height="136px"><br>
+                    <audio preload="metadata" controls>
+                        <source src="凡人の人生計画.m4a" type="audio/aac">
+                    </audio>
+                </span>
             </div><br>
             <div class="item">
-                
-                
+                <span>
+
+                </span>    
             </div><br>
             <div class="item">
-                
-                
+                <span>
+
+                </span>
             </div><br>
             <div class="item">
-                
-                
+                <span>
+
+                </span>  
             </div><br>
             <div class="item">
-                
-                
+                <span>
+
+                </span>
             </div><br>
             <div class="item">
-                
-                
+                <span>
+
+                </span>
+            </div><br>
+            <div class="item">
+                <span>
+                    
+                </span>
+            </div><br>
+            <div class="item">
+                <span>
+                    
+                </span>
             </div><br>
         </div>     
     </div>
